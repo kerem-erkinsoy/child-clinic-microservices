@@ -66,15 +66,15 @@ class ChildResource {
     }
 
     @GetMapping("owners/*/pets/{petId}")
-    public ChildDetails findPet(@PathVariable("petId") int petId) {
-        return new ChildDetails(findPetById(petId));
+    public ChildDetails findPet(@PathVariable("petId") int childId) {
+        return new ChildDetails(findPetById(childId));
     }
 
 
-    private Child findPetById(int petId) {
-        Optional<Child> pet = childrenRepository.findById(petId);
+    private Child findPetById(int childId) {
+        Optional<Child> pet = childrenRepository.findById(childId);
         if (!pet.isPresent()) {
-            throw new ResourceNotFoundException("Child " + petId + " not found");
+            throw new ResourceNotFoundException("Child " + childId + " not found");
         }
         return pet.get();
     }
