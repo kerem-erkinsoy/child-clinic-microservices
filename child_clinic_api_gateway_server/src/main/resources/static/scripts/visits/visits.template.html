@@ -1,0 +1,38 @@
+<h2>Visits</h2>
+
+<form ng-submit="$ctrl.submit()">
+
+    <div class="form-group">
+        <label>Date</label>
+        <input type="date" class="form-control" ng-model='$ctrl.date'/>
+    </div>
+
+    <div class="form-group">
+        <label>Description</label>
+        <textarea class="form-control" ng-model="$ctrl.desc" style="resize:vertical;" required></textarea>
+    </div>
+
+    <div class="form-group">
+        <label>Doctors</label>
+        <select class="form-control" ng-model="$ctrl.doctor">
+            <option value="Dr. Kerem Erkinsoy ">Dr. Kerem Erkinsoy</option>
+            <option value="Dr. Erhan Gültekin">Dr. Erhan Gültekin</option>
+            <option value="Dr. Ayten Durmaz">Dr. Ayten Durmaz</option>
+            <option value="Dr. Egemen Aydın">Dr. Egemen Aydın</option>
+            <option value="Dr. Oğuz Türk">Dr. Oğuz Türk</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <button class="btn btn-default" type="submit">Add New Visit</button>
+    </div>
+
+</form>
+
+<h3>Previous Visits</h3>
+<table class="table">
+    <tr ng-repeat="v in $ctrl.visits">
+        <td class="col-sm-2">{{v.date}}</td>
+        <td style="white-space: pre-line">{{v.description}}</td>
+    </tr>
+</table>
