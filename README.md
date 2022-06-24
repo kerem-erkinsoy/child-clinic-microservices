@@ -122,8 +122,8 @@ The Spring Boot auto-configuration enables the instrumentation of requests handl
 All those three REST controllers `OwnerResource`, `PetResource` and `VisitResource` have been instrumented by the `@Timed` Micrometer annotation at class level.
 
 * `customers-service` application has the following custom metrics enabled:
-  * @Timed: `petclinic.owner`
-  * @Timed: `petclinic.pet`
+  * @Timed: `petclinic.parent`
+  * @Timed: `petclinic.child`
 * `visits-service` application has the following custom metrics enabled:
   * @Timed: `petclinic.visit`
 

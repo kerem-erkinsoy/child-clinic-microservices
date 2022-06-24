@@ -27,7 +27,7 @@ import org.springframework.beans.support.PropertyComparator;
 
 @Entity
 @Table(name = "vets")
-public class Vet {
+public class Doctor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

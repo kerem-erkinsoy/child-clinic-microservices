@@ -10,7 +10,7 @@ import javax.validation.constraints.Size;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Data
-class PetRequest {
+class ChildRequest {
     private int id;
 
     @JsonFormat(pattern = "yyyy-MM-dd")

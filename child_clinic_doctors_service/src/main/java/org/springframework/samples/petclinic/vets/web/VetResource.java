@@ -5,8 +5,8 @@ import lombok.RequiredArgsConstructor;
 
 import java.util.List;
 
-import org.springframework.samples.petclinic.vets.model.Vet;
-import org.springframework.samples.petclinic.vets.model.VetRepository;
+import org.springframework.samples.petclinic.vets.model.Doctor;
+import org.springframework.samples.petclinic.vets.model.DoctorRepository;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,10 +16,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 class VetResource {
 
-    private final VetRepository vetRepository;
+    private final DoctorRepository doctorRepository;
 
     @GetMapping
-    public List<Vet> showResourcesVetList() {
-        return vetRepository.findAll();
+    public List<Doctor> showResourcesVetList() {
+        return doctorRepository.findAll();
     }
 }

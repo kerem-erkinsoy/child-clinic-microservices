@@ -10,9 +10,9 @@ import org.springframework.samples.petclinic.vets.system.VetsProperties;
 @EnableDiscoveryClient
 @SpringBootApplication
 @EnableConfigurationProperties(VetsProperties.class)
-public class VetsServiceApplication {
+public class DoctorsServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(VetsServiceApplication.class, args);
+		SpringApplication.run(DoctorsServiceApplication.class, args);
 	}
 }

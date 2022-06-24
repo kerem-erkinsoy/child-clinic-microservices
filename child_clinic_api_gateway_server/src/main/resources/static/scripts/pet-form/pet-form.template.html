@@ -4,14 +4,14 @@
     <div class="form-group">
         <label class="col-sm-2 control-label">Parent</label>
         <div class="col-sm-6">
-            <p class="form-control-static">{{$ctrl.pet.owner}}</p>
+            <p class="form-control-static">{{$ctrl.child.parent}}</p>
         </div>
     </div>
 
     <div class="form-group">
         <label class="col-sm-2 control-label">Name </label>
         <div class="col-sm-6">
-            <input class="form-control col-sm-4" ng-model="$ctrl.pet.name" name="name" required type="text"/>
+            <input class="form-control col-sm-4" ng-model="$ctrl.child.name" name="name" required type="text"/>
             <span ng-show="petForm.name.$error.required" class="help-inline">Name is required.</span>
         </div>
     </div>
@@ -19,7 +19,7 @@
     <div class="form-group">
         <label class="col-sm-2 control-label">Birth date</label>
         <div class="col-sm-6">
-            <input class="form-control" ng-model="$ctrl.pet.birthDate" required type="date"/>
+            <input class="form-control" ng-model="$ctrl.child.birthDate" required type="date"/>
             <span ng-show="petForm.name.$error.required" class="help-inline"> birth date is required.</span>
         </div>
     </div>
@@ -27,7 +27,7 @@
     <div class="form-group">
         <label class="col-sm-2 control-label">Gender </label>
         <div class="col-sm-6">
-            <input class="form-control col-sm-4" ng-model="$ctrl.pet.gender" name="gender" required type="text"/>
+            <input class="form-control col-sm-4" ng-model="$ctrl.child.gender" name="gender" required type="text"/>
             <span ng-show="petForm.name.$error.required" class="help-inline">Gender is required.</span>
         </div>
     </div>

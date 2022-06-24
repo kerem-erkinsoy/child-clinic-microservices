@@ -14,7 +14,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "types")
-public class PetType {
+public class DiseaseType {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

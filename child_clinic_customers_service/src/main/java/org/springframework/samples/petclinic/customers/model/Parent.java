@@ -26,7 +26,7 @@ import org.springframework.core.style.ToStringCreator;
 
 @Entity
 @Table(name = "owners")
-public class Owner {
+public class Parent {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -65,24 +65,24 @@ public class Owner {
     private String telephone;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "owner")
-    private Set<Pet> pets;
+    private Set<Child> pets;
 
-    protected Set<Pet> getPetsInternal() {
+    protected Set<Child> getPetsInternal() {
         if (this.pets == null) {
             this.pets = new HashSet<>();
         }
         return this.pets;
     }
 
-    public List<Pet> getPets() {
-        final List<Pet> sortedPets = new ArrayList<>(getPetsInternal());
-        PropertyComparator.sort(sortedPets, new MutableSortDefinition("name", true, true));
-        return Collections.unmodifiableList(sortedPets);
+    public List<Child> getPets() {
+        final List<Child> sortedChildren = new ArrayList<>(getPetsInternal());
+        PropertyComparator.sort(sortedChildren, new MutableSortDefinition("name", true, true));
+        return Collections.unmodifiableList(sortedChildren);
     }
 
-    public void addPet(Pet pet) {
-        getPetsInternal().add(pet);
-        pet.setOwner(this);
+    public void addPet(Child child) {
+        getPetsInternal().add(child);
+        child.setOwner(this);
     }
 
     @Override

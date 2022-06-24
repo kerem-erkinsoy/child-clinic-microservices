@@ -13,7 +13,7 @@ import org.springframework.core.style.ToStringCreator;
 @Data
 @Entity
 @Table(name = "pets")
-public class Pet {
+public class Child {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -30,12 +30,12 @@ public class Pet {
 
     @ManyToOne
     @JoinColumn(name = "type_id")
-    private PetType type;
+    private DiseaseType type;
 
     @ManyToOne
     @JoinColumn(name = "owner_id")
     @JsonIgnore
-    private Owner owner;
+    private Parent owner;
 
 
     @Override
