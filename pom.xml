@@ -10,7 +10,8 @@
     </parent>
 
     <groupId>org.springframework.samples</groupId>
-    <artifactId>spring-petclinic-microservices</artifactId>
+    <artifactId>child-clinic-microservices</artifactId>
+<!--    <artifactId>spring-petclinic-microservices</artifactId>-->
     <version>2.6.7</version>
     <name>${project.artifactId}</name>
     <packaging>pom</packaging>
