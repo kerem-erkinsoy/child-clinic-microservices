@@ -16,13 +16,6 @@
     <packaging>pom</packaging>
 
     <modules>
-<!--        <module>spring-petclinic-admin-server</module>-->
-<!--        <module>spring-petclinic-customers-service</module>-->
-<!--        <module>spring-petclinic-vets-service</module>-->
-<!--        <module>spring-petclinic-visits-service</module>-->
-<!--        <module>spring-petclinic-config-server</module>-->
-<!--        <module>spring-petclinic-discovery-server</module>-->
-<!--        <module>spring-petclinic-api-gateway</module>-->
         <module>child_clinic_admin_server</module>
         <module>child_clinic_api_gateway_server</module>
         <module>child_clinic_config_server</module>
